@@ -8,6 +8,11 @@ Bundler.require(*Rails.groups)
 
 module ChatApp
   class Application < Rails::Application
+    config.generators do |g|
+      g.stylesheets false
+      g.javascripts false
+      g.helper false
+      g.test_framework false
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
 
@@ -16,10 +21,6 @@ module ChatApp
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
   end
-  config.generators do |g|
-    g.stylesheets false
-    g.javascripts false
-    g.helper false
-    g.test_framework false
+
   end
 end
